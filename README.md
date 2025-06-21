@@ -24,18 +24,19 @@ The model will represent a direct AC-AC SST based on the following "extreme deci
 * **In-Line Deployment Concept:** The model's parameters will be based on the assumption of a compact design mounted on a steel structure within a transmission right-of-way.
 
 ### 2.2. High-Level Diagram
-+-----------------+   +----------------------+   +-----------------+
-|   138kV Grid    |   |  Single-Stage AC-AC  |   |  Distribution   |
-|     Source      +--->|      Converter       +--->|      Load       |
-+-----------------+   | (with HF Autoxfmr)   |   +-----------------+
-+----------------------+
-^
-|
-+----------------------+
-|    Control System    |
-| (V-reg, PFC, FCL)    |
-+----------------------+
-
+```
+      +-----------------+   +----------------------+   +-----------------+
+      |   138kV Grid    |   |  Single-Stage AC-AC  |   |  Distribution   |
+      |     Source      +--->|      Converter       +--->|      Load       |
+      +-----------------+   | (with HF Autoxfmr)   |   +-----------------+
+                          +----------------------+
+                          ^
+                          |
+      +----------------------+
+      |    Control System    |
+      | (V-reg, PFC, FCL)    |
+      +----------------------+
+```
 
 ## 3. Functional Requirements
 

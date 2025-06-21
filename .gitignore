@@ -1,0 +1,53 @@
+# MATLAB and Simulink cache files
+*.mex*
+*.sfx
+*.slxc
+*.slx.autosave
+*.mldatx
+
+# Simulation artifacts
+*.bak
+*.html
+*.xml
+*.png
+*.pdf
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.log
+*.out
+*.rst
+*.mat
+*.slx.original
+
+# Build artifacts
+build/
+dist/
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.app
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.msi
+*.msm
+*.msp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+.vscode/
+.idea/
+*.swp
+*~
+*.userprefs
+
+# Data folder - typically contains large files
+data/

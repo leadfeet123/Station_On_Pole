@@ -10,7 +10,6 @@ if isempty(script_dir)
 end
 run(fullfile(script_dir, 'set_parameters.m'));
 
-% In a real MATLAB environment, this would start the Simulink model:
-% sim('simulink/main_sst_model.slx');
-disp('Starting Simulink model execution: simulink/main_sst_model.slx');
-disp('Simulation complete.');
+% To run the Simulink model, uncomment the line below in MATLAB/Simulink:
+% sim(fullfile(fileparts(script_dir), 'simulink', 'main_sst_model.slx'));
+disp('Parameters loaded. To run the simulation, open MATLAB/Simulink and call sim() on simulink/main_sst_model.slx.');

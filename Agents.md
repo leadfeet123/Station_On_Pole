@@ -8,7 +8,7 @@ This repository contains a MATLAB/Simulink project for a Compact In-Line Solid-S
 ​Development Strategy
 ​Binary .slx files are difficult to version. We use programmatic MATLAB scripts (.m files) in /scripts to generate, parameterize, and test system models.
 ​Continuous Improvement Checklist
-​Jules must execute exactly one unchecked step per daily run, mark it as completed, and submit a PR.
+​The Coder Agent must execute exactly one unchecked step per daily run, mark it as completed, and submit a PR.
 
 ​[ ] STEP 1: SOLVER OPTIMIZATION - Analyze scripts/set_parameters.m and write optimizations for numerical stability and solver tolerances to handle 20kHz switching.
 
@@ -20,6 +20,10 @@ This repository contains a MATLAB/Simulink project for a Compact In-Line Solid-S
 
 ​[ ] STEP 5: DOCUMENTATION REFINE - Review all scripts for proper comment structures, unit mappings, and verify system compliance against the README.md PRD.
 
-​Commands
-​Run Parameter Script: run('scripts/set_parameters.m')
-​Run Parameter Tests: run('tests/test_parameters.m')
+​Completed Iterations Log
+​This section is managed by the Architect Agent. Completed checklists are archived here to maintain a history of the system's evolution.
+
+​Iteration v1.0.0 (Baseline Setup)
+​[x] Initial structure established.
+​[x] Simulation parameter specs defined.
+​[x] Project README and PRD compiled.

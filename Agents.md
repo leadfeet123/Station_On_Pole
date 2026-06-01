@@ -10,7 +10,7 @@ This repository contains a MATLAB/Simulink project for a Compact In-Line Solid-S
 ​Continuous Improvement Checklist
 ​The Coder Agent must execute exactly one unchecked step per daily run, mark it as completed, and submit a PR.
 
-​[ ] STEP 1: SOLVER OPTIMIZATION - Analyze scripts/set_parameters.m and write optimizations for numerical stability and solver tolerances to handle 20kHz switching.
+​[x] STEP 1: SOLVER OPTIMIZATION - Analyze scripts/set_parameters.m and write optimizations for numerical stability and solver tolerances to handle 20kHz switching.
 
 ​[ ] STEP 2: AUTOTRANSFORMER VALIDATION - Expand tests/test_parameters.m or create a validation script for the non-linear amorphous core magnetizing inductance.
 

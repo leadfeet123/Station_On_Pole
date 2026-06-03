@@ -58,4 +58,7 @@ assert(exist('max_step', 'var') == 1, 'max_step is not defined');
 expected_max_step = 1 / (20000 * 100);
 assert(abs(max_step - expected_max_step) < 1e-10, 'max_step value is incorrect');
 
+assert(exist('Ts', 'var') == 1, 'Ts should be defined');
+assert(Ts == expected_max_step, 'Ts value is incorrect');
+
 disp('All parameter validation tests passed!');

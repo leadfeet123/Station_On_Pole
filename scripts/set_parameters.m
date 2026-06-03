@@ -30,5 +30,6 @@ max_step = solver_MaxStep;
 solver_max_step = solver_MaxStep;
 solver_rel_tol = solver_RelTol;
 solver_abs_tol = solver_AbsTol;
+Ts = solver_MaxStep;
 
 disp('Parameters loaded successfully.');

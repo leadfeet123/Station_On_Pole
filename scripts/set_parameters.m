@@ -17,6 +17,10 @@ solver_RelTol = 1e-4;              % Tighter relative tolerance
 solver_AbsTol = 1e-5;              % Tighter absolute tolerance
 solver_Type = 'ode23tb';           % Stiff solver suited for power electronics
 
+% Autotransformer Amorphous Core Parameters
+B_sat = 1.56;        % Saturation flux density (T)
+L_mag = 0.05;        % Nominal magnetizing inductance (H) for validation
+
 % Backward-compatible aliases used by alternate scripts/branches
 T_s = 1e-6;        % Sample time (s) - recommended for high-freq switching
 RelTol = solver_RelTol;

@@ -61,4 +61,10 @@ assert(abs(max_step - expected_max_step) < 1e-10, 'max_step value is incorrect')
 assert(exist('Ts', 'var') == 1, 'Ts should be defined');
 assert(Ts == expected_max_step, 'Ts value is incorrect');
 
+assert(exist('B_sat', 'var') == 1, 'B_sat should be defined');
+assert(B_sat == 1.56, 'B_sat value is incorrect');
+
+assert(exist('L_mag', 'var') == 1, 'L_mag should be defined');
+assert(L_mag == 0.05, 'L_mag value is incorrect');
+
 disp('All parameter validation tests passed!');

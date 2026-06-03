@@ -15,6 +15,12 @@ end
 run(fullfile(root_dir, 'scripts', 'set_parameters.m'));
 
 % Verify critical parameters
+assert(exist('V_in_rms', 'var') == 1, 'V_in_rms is not defined');
+assert(V_in_rms == 138000, 'V_in_rms should be 138000');
+
+assert(exist('f_grid', 'var') == 1, 'f_grid is not defined');
+assert(f_grid == 60, 'f_grid should be 60');
+
 assert(exist('f_sw', 'var') == 1, 'f_sw is not defined');
 assert(f_sw == 20000, 'f_sw should be 20000');
 
@@ -32,6 +38,15 @@ assert(strcmp(solver_Type, 'ode23tb'), 'solver_Type is incorrect');
 
 assert(exist('solver_type', 'var') == 1, 'solver_type is not defined');
 assert(strcmp(solver_type, 'ode23tb'), 'solver_type should be ode23tb');
+
+assert(exist('solver_max_step', 'var') == 1, 'solver_max_step is not defined');
+assert(solver_max_step == 1 / (100 * f_sw), 'solver_max_step value is incorrect');
+
+assert(exist('solver_rel_tol', 'var') == 1, 'solver_rel_tol is not defined');
+assert(solver_rel_tol == 1e-4, 'solver_rel_tol should be 1e-4');
+
+assert(exist('solver_abs_tol', 'var') == 1, 'solver_abs_tol is not defined');
+assert(solver_abs_tol == 1e-5, 'solver_abs_tol should be 1e-5');
 
 assert(exist('rel_tol', 'var') == 1, 'rel_tol is not defined');
 assert(rel_tol == 1e-4, 'rel_tol should be 1e-4');

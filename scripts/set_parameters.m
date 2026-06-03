@@ -27,5 +27,8 @@ solver_type = solver_Type;
 rel_tol = solver_RelTol;
 abs_tol = solver_AbsTol;
 max_step = solver_MaxStep;
+solver_max_step = solver_MaxStep;
+solver_rel_tol = solver_RelTol;
+solver_abs_tol = solver_AbsTol;
 
 disp('Parameters loaded successfully.');

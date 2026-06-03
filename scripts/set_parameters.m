@@ -17,4 +17,10 @@ solver_RelTol = 1e-4;              % Tighter relative tolerance
 solver_AbsTol = 1e-5;              % Tighter absolute tolerance
 solver_Type = 'ode23tb';           % Stiff solver suited for power electronics
 
+% Backward-compatible aliases used by alternate scripts/branches
+T_s = 1e-6;        % Sample time (s) - recommended for high-freq switching
+RelTol = solver_RelTol;
+AbsTol = solver_AbsTol;
+MaxStep = solver_MaxStep;
+
 disp('Parameters loaded successfully.');

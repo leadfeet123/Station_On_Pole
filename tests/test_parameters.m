@@ -76,6 +76,9 @@ assert(V_out_ll_rms == 34500, 'V_out_ll_rms value is incorrect');
 assert(exist('I_rated_rms', 'var') == 1, 'I_rated_rms should be defined');
 assert(I_rated_rms > 0, 'I_rated_rms should be positive');
 
+assert(exist('pf_target', 'var') == 1, 'pf_target should be defined');
+assert(pf_target == 0.99, 'pf_target should be 0.99');
+
 assert(exist('fcl_limit_factor', 'var') == 1, 'fcl_limit_factor should be defined');
 assert(fcl_limit_factor == 1.5, 'fcl_limit_factor value is incorrect');
 

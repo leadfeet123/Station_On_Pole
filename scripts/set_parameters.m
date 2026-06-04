@@ -11,6 +11,13 @@ f_grid = 60;       % Grid Frequency (Hz)
 f_sw = 20000;      % Switching Frequency (Hz) - 20kHz for compact magnetics
 % Note: Using 10kV SiC MOSFETs is assumed in the model design
 
+% Unit mapping for key variables:
+%   *_rms: RMS electrical quantities (SI base units)
+%   *_va:  Apparent power (VA)
+%   *_ms:  Time in milliseconds
+%   *_s:   Time in seconds
+%   *_pu:  Per-unit ratios
+
 % Solver Optimizations for 20kHz switching
 solver_MaxStep = 1 / (100 * f_sw); % High resolution for 20kHz switching
 solver_RelTol = 1e-4;              % Tighter relative tolerance
@@ -28,6 +35,7 @@ T_s = 1e-6;
 S_rated_va = 20e6;        % Nominal three-phase apparent power rating (VA)
 V_out_ll_rms = 34500;     % Nominal low-side line-to-line RMS voltage (V)
 I_rated_rms = S_rated_va / (sqrt(3) * V_out_ll_rms); % Rated line current (A RMS)
+pf_target = 0.99;         % Input-side target power factor (FR-04)
 
 fcl_limit_factor = 1.5;   % Fault current limit multiplier (pu of rated current)
 fcl_current_limit_rms = fcl_limit_factor * I_rated_rms; % Current limit threshold (A RMS)
@@ -56,5 +64,6 @@ fcl_limit_pu = fcl_limit_factor;
 fcl_current_limit_a = fcl_current_limit_rms;
 fcl_trip_threshold_a = fcl_trip_threshold_rms;
 fcl_release_threshold_a = fcl_release_threshold_rms;
+pf_setpoint = pf_target;
 
 disp('Parameters loaded successfully.');

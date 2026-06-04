@@ -21,8 +21,24 @@ solver_Type = 'ode23tb';           % Stiff solver suited for power electronics
 B_sat = 1.56;        % Saturation flux density (T)
 L_mag = 0.05;        % Nominal magnetizing inductance (H) for validation
 
+% Sample time (s) - recommended for high-freq switching
+T_s = 1e-6;
+
+% Protection & Fault Current Limiting (FCL) Parameters
+S_rated_va = 20e6;        % Nominal three-phase apparent power rating (VA)
+V_out_ll_rms = 34500;     % Nominal low-side line-to-line RMS voltage (V)
+I_rated_rms = S_rated_va / (sqrt(3) * V_out_ll_rms); % Rated line current (A RMS)
+
+fcl_limit_factor = 1.5;   % Fault current limit multiplier (pu of rated current)
+fcl_current_limit_rms = fcl_limit_factor * I_rated_rms; % Current limit threshold (A RMS)
+fcl_trip_threshold_rms = fcl_current_limit_rms;         % Overcurrent trip threshold (A RMS)
+fcl_release_factor = 0.95;                              % Reset threshold as fraction of trip level
+fcl_release_threshold_rms = fcl_release_factor * fcl_trip_threshold_rms;
+fcl_response_ms = 2;                                    % Target limit response time (ms)
+fcl_response_s = fcl_response_ms / 1000;                % Response time in seconds
+fcl_detection_samples = ceil(fcl_response_s / T_s);     % Sample window for overcurrent confirmation
+
 % Backward-compatible aliases used by alternate scripts/branches
-T_s = 1e-6;        % Sample time (s) - recommended for high-freq switching
 RelTol = solver_RelTol;
 AbsTol = solver_AbsTol;
 MaxStep = solver_MaxStep;
@@ -35,5 +51,10 @@ solver_max_step = solver_MaxStep;
 solver_rel_tol = solver_RelTol;
 solver_abs_tol = solver_AbsTol;
 Ts = solver_MaxStep;
+
+fcl_limit_pu = fcl_limit_factor;
+fcl_current_limit_a = fcl_current_limit_rms;
+fcl_trip_threshold_a = fcl_trip_threshold_rms;
+fcl_release_threshold_a = fcl_release_threshold_rms;
 
 disp('Parameters loaded successfully.');

@@ -67,4 +67,31 @@ assert(B_sat == 1.56, 'B_sat value is incorrect');
 assert(exist('L_mag', 'var') == 1, 'L_mag should be defined');
 assert(L_mag == 0.05, 'L_mag value is incorrect');
 
+assert(exist('S_rated_va', 'var') == 1, 'S_rated_va should be defined');
+assert(S_rated_va == 20e6, 'S_rated_va value is incorrect');
+
+assert(exist('V_out_ll_rms', 'var') == 1, 'V_out_ll_rms should be defined');
+assert(V_out_ll_rms == 34500, 'V_out_ll_rms value is incorrect');
+
+assert(exist('I_rated_rms', 'var') == 1, 'I_rated_rms should be defined');
+assert(I_rated_rms > 0, 'I_rated_rms should be positive');
+
+assert(exist('fcl_limit_factor', 'var') == 1, 'fcl_limit_factor should be defined');
+assert(fcl_limit_factor == 1.5, 'fcl_limit_factor value is incorrect');
+
+assert(exist('fcl_trip_threshold_rms', 'var') == 1, 'fcl_trip_threshold_rms should be defined');
+assert(fcl_trip_threshold_rms == fcl_limit_factor * I_rated_rms, 'fcl_trip_threshold_rms value is incorrect');
+
+assert(exist('fcl_release_threshold_rms', 'var') == 1, 'fcl_release_threshold_rms should be defined');
+assert(fcl_release_threshold_rms < fcl_trip_threshold_rms, 'fcl_release_threshold_rms should be below trip threshold');
+
+assert(exist('fcl_response_ms', 'var') == 1, 'fcl_response_ms should be defined');
+assert(fcl_response_ms == 2, 'fcl_response_ms should be 2 ms');
+
+assert(exist('fcl_detection_samples', 'var') == 1, 'fcl_detection_samples should be defined');
+assert(fcl_detection_samples == ceil((fcl_response_ms / 1000) / T_s), 'fcl_detection_samples value is incorrect');
+
+assert(exist('fcl_current_limit_a', 'var') == 1, 'fcl_current_limit_a should be defined');
+assert(fcl_current_limit_a == fcl_current_limit_rms, 'fcl_current_limit_a alias mismatch');
+
 disp('All parameter validation tests passed!');

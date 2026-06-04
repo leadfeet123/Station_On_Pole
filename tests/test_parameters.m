@@ -97,4 +97,11 @@ assert(fcl_detection_samples == ceil((fcl_response_ms / 1000) / T_s), 'fcl_detec
 assert(exist('fcl_current_limit_a', 'var') == 1, 'fcl_current_limit_a should be defined');
 assert(fcl_current_limit_a == fcl_current_limit_rms, 'fcl_current_limit_a alias mismatch');
 
+% Validate calculate_sic_losses.m
+run(fullfile(root_dir, 'scripts', 'calculate_sic_losses.m'));
+assert(exist('P_cond', 'var') == 1, 'P_cond is not defined');
+assert(exist('P_sw', 'var') == 1, 'P_sw is not defined');
+assert(exist('P_total_switch', 'var') == 1, 'P_total_switch is not defined');
+assert(P_total_switch == P_cond + P_sw, 'P_total_switch does not equal P_cond + P_sw');
+
 disp('All parameter validation tests passed!');

@@ -67,4 +67,11 @@ assert(B_sat == 1.56, 'B_sat value is incorrect');
 assert(exist('L_mag', 'var') == 1, 'L_mag should be defined');
 assert(L_mag == 0.05, 'L_mag value is incorrect');
 
+% Validate calculate_sic_losses.m
+run(fullfile(root_dir, 'scripts', 'calculate_sic_losses.m'));
+assert(exist('P_cond', 'var') == 1, 'P_cond is not defined');
+assert(exist('P_sw', 'var') == 1, 'P_sw is not defined');
+assert(exist('P_total_switch', 'var') == 1, 'P_total_switch is not defined');
+assert(P_total_switch == P_cond + P_sw, 'P_total_switch does not equal P_cond + P_sw');
+
 disp('All parameter validation tests passed!');

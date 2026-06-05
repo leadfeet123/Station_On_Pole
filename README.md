@@ -18,6 +18,9 @@ The project models serve as a virtual prototype to simulate, analyze, and valida
 - `scripts/`: Contains Octave/MATLAB scripts for managing the simulation.
   - `set_parameters.m`: Script to define and load the simulation parameters (voltages, frequencies, component properties) into the workspace.
   - `run_simulation.m`: Script to initialize parameters and execute the Simulink model.
+  - `analyze_converter_stress.m`: Calculates theoretical switching/conduction losses for the SiC converter stage.
+  - `audit_protection_fcl.m`: Audits baseline overcurrent and fault-current-limiting threshold settings.
+  - `verify_prd_compliance.m`: Runs script-level checks against key README/PRD requirements.
 
 ## Usage
 
@@ -25,5 +28,11 @@ To run the simulations, you will need MATLAB/Simulink (R2024a or later) with the
 
 1.  **Initialize Parameters**: Run `set_parameters.m` to load the base parameters for the 138kV system and high-frequency SiC components into your workspace.
 2.  **Run Simulation**: Execute `run_simulation.m` to trigger the simulation and begin analysis.
+3.  **Run Audits (Recommended)**:
+    - `analyze_converter_stress.m`
+    - `audit_protection_fcl.m`
+    - `verify_prd_compliance.m`
+4.  **Run Parameter Validation Test** (Octave/MATLAB):
+    - `octave --quiet tests/test_parameters.m`
 
 Please refer to `docs/PRD.md` and `docs/RESEARCH.md` for deeper insights into the design requirements and the underlying technologies driving the CSSS architecture.

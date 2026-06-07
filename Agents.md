@@ -10,18 +10,26 @@ This repository contains a MATLAB/Simulink project for a Compact In-Line Solid-S
 ​Continuous Improvement Checklist
 ​The Coder Agent must execute exactly one unchecked step per daily run, mark it as completed, and submit a PR.
 
-​[x] STEP 1: SOLVER OPTIMIZATION - Analyze scripts/set_parameters.m and write optimizations for numerical stability and solver tolerances to handle 20kHz switching.
+​- [ ] STEP 6: SIMSCAPE TOPOLOGY - Draft initial parameterization and connectivity scripts for the specific direct AC-AC matrix converter topology.
 
-​[x] STEP 2: AUTOTRANSFORMER VALIDATION - Expand tests/test_parameters.m or create a validation script for the non-linear amorphous core magnetizing inductance.
+​- [ ] STEP 7: LCL FILTER DESIGN - Implement and define parameter scripts for the grid-side LCL filter to attenuate 20kHz switching harmonics.
 
-​[x] STEP 3: CONVERTER STRESS ANALYSIS - Review the switching frequencies and write a script calculating theoretical switching/conduction losses for the SiC stage.
+​- [ ] STEP 8: SATURATION CURVE TUNING - Fine-tune the amorphous core autotransformer saturation curves based on the newly added validation scripts.
 
-​[x] STEP 4: PROTECTION & FCL AUDIT - Implement basic overcurrent threshold logic or parameter definitions in the scripts folder to prepare for fault current limiting.
+​- [ ] STEP 9: FAULT EXPANSION - Expand fault simulation parameters in the protection script to cover line-to-ground and three-phase faults.
 
-​[x] STEP 5: DOCUMENTATION REFINE - Review all scripts for proper comment structures, unit mappings, and verify system compliance against the README.md PRD.
+​- [ ] STEP 10: PI CONTROLS - Enhance the PI voltage regulator loop controls by defining dynamic gains in set_parameters.m.
 
 ​Completed Iterations Log
 ​This section is managed by the Architect Agent. Completed checklists are archived here to maintain a history of the system's evolution.
+
+​Iteration v1.1.0 (Refinement and Optimization)
+​Accomplished baseline solver optimization, autotransformer validation, SiC converter loss analysis, FCL parameters auditing, and documentation refinement.
+​[x] STEP 1: SOLVER OPTIMIZATION - Analyze scripts/set_parameters.m and write optimizations for numerical stability and solver tolerances to handle 20kHz switching.
+​[x] STEP 2: AUTOTRANSFORMER VALIDATION - Expand tests/test_parameters.m or create a validation script for the non-linear amorphous core magnetizing inductance.
+​[x] STEP 3: CONVERTER STRESS ANALYSIS - Review the switching frequencies and write a script calculating theoretical switching/conduction losses for the SiC stage.
+​[x] STEP 4: PROTECTION & FCL AUDIT - Implement basic overcurrent threshold logic or parameter definitions in the scripts folder to prepare for fault current limiting.
+​[x] STEP 5: DOCUMENTATION REFINE - Review all scripts for proper comment structures, unit mappings, and verify system compliance against the README.md PRD.
 
 ​Iteration v1.0.0 (Baseline Setup)
 ​[x] Initial structure established.

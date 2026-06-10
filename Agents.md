@@ -10,7 +10,7 @@ This repository contains a MATLAB/Simulink project for a Compact In-Line Solid-S
 ​Continuous Improvement Checklist
 ​The Coder Agent must execute exactly one unchecked step per daily run, mark it as completed, and submit a PR.
 
-​- [ ] STEP 6: SIMSCAPE TOPOLOGY - Draft initial parameterization and connectivity scripts for the specific direct AC-AC matrix converter topology.
+​- [x] STEP 6: SIMSCAPE TOPOLOGY - Draft initial parameterization and connectivity scripts for the specific direct AC-AC matrix converter topology.
 
 ​- [ ] STEP 7: LCL FILTER DESIGN - Implement and define parameter scripts for the grid-side LCL filter to attenuate 20kHz switching harmonics.
 

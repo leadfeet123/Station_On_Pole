@@ -66,4 +66,6 @@ fcl_trip_threshold_a = fcl_trip_threshold_rms;
 fcl_release_threshold_a = fcl_release_threshold_rms;
 pf_setpoint = pf_target;
 
+run(fullfile(fileparts(mfilename('fullpath')), 'simscape_topology_parameters.m'));
+
 disp('Parameters loaded successfully.');

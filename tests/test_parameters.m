@@ -97,6 +97,12 @@ assert(fcl_detection_samples == ceil((fcl_response_ms / 1000) / T_s), 'fcl_detec
 assert(exist('fcl_current_limit_a', 'var') == 1, 'fcl_current_limit_a should be defined');
 assert(fcl_current_limit_a == fcl_current_limit_rms, 'fcl_current_limit_a alias mismatch');
 
+% Validate simscape_topology_parameters.m
+assert(exist('num_input_phases', 'var') == 1, 'num_input_phases is not defined');
+assert(num_input_phases == 3, 'num_input_phases should be 3');
+assert(exist('num_output_phases', 'var') == 1, 'num_output_phases is not defined');
+assert(num_output_phases == 3, 'num_output_phases should be 3');
+
 % Validate calculate_sic_losses.m
 run(fullfile(root_dir, 'scripts', 'calculate_sic_losses.m'));
 assert(exist('P_cond', 'var') == 1, 'P_cond is not defined');

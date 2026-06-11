@@ -12,7 +12,7 @@ This repository contains a MATLAB/Simulink project for a Compact In-Line Solid-S
 
 ​- [x] STEP 6: SIMSCAPE TOPOLOGY - Draft initial parameterization and connectivity scripts for the specific direct AC-AC matrix converter topology.
 
-​- [ ] STEP 7: LCL FILTER DESIGN - Implement and define parameter scripts for the grid-side LCL filter to attenuate 20kHz switching harmonics.
+​- [x] STEP 7: LCL FILTER DESIGN - Implement and define parameter scripts for the grid-side LCL filter to attenuate 20kHz switching harmonics.
 
 ​- [ ] STEP 8: SATURATION CURVE TUNING - Fine-tune the amorphous core autotransformer saturation curves based on the newly added validation scripts.
 

@@ -110,4 +110,9 @@ assert(exist('P_sw', 'var') == 1, 'P_sw is not defined');
 assert(exist('P_total_switch', 'var') == 1, 'P_total_switch is not defined');
 assert(P_total_switch == P_cond + P_sw, 'P_total_switch does not equal P_cond + P_sw');
 
+% Validate AC-AC Matrix Topology script
+run(fullfile(root_dir, 'scripts', 'setup_ac_ac_matrix_topology.m'));
+assert(exist('MatrixConverter', 'var') == 1, 'MatrixConverter is not defined');
+assert(MatrixConverter.NumSwitches == 9, 'MatrixConverter should have 9 switches');
+
 disp('All parameter validation tests passed!');

@@ -115,4 +115,10 @@ run(fullfile(root_dir, 'scripts', 'setup_ac_ac_matrix_topology.m'));
 assert(exist('MatrixConverter', 'var') == 1, 'MatrixConverter is not defined');
 assert(MatrixConverter.NumSwitches == 9, 'MatrixConverter should have 9 switches');
 
+% Validate LCL Filter Design script
+assert(exist('lcl_L1', 'var') == 1, 'lcl_L1 is not defined');
+assert(exist('lcl_L2', 'var') == 1, 'lcl_L2 is not defined');
+assert(exist('lcl_Cf', 'var') == 1, 'lcl_Cf is not defined');
+assert(exist('lcl_Rd', 'var') == 1, 'lcl_Rd is not defined');
+
 disp('All parameter validation tests passed!');

@@ -67,5 +67,6 @@ fcl_release_threshold_a = fcl_release_threshold_rms;
 pf_setpoint = pf_target;
 
 run(fullfile(fileparts(mfilename('fullpath')), 'simscape_topology_parameters.m'));
+run(fullfile(fileparts(mfilename('fullpath')), 'design_lcl_filter.m'));
 
 disp('Parameters loaded successfully.');

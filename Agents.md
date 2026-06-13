@@ -14,7 +14,7 @@ This repository contains a MATLAB/Simulink project for a Compact In-Line Solid-S
 
 ​- [x] STEP 7: LCL FILTER DESIGN - Implement and define parameter scripts for the grid-side LCL filter to attenuate 20kHz switching harmonics.
 
-​- [ ] STEP 8: SATURATION CURVE TUNING - Fine-tune the amorphous core autotransformer saturation curves based on the newly added validation scripts.
+​- [x] STEP 8: SATURATION CURVE TUNING - Fine-tune the amorphous core autotransformer saturation curves based on the newly added validation scripts.
 
 ​- [ ] STEP 9: FAULT EXPANSION - Expand fault simulation parameters in the protection script to cover line-to-ground and three-phase faults.
 

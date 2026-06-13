@@ -28,6 +28,12 @@ solver_Type = 'ode23tb';           % Stiff solver suited for power electronics
 B_sat = 1.56;        % Saturation flux density (T)
 L_mag = 0.05;        % Nominal magnetizing inductance (H) for validation
 
+% Saturation Curve Tuning (Amorphous Core)
+% B-H curve or V-I curve data points for validation script
+I_sat_points = [0, 0.1, 0.5, 1.0, 5.0, 10.0, 50.0]; % Magnetizing current points (A)
+Phi_sat_points = [0, 0.045, 0.20, 0.35, 0.45, 0.48, 0.50]; % Flux linkage points (Wb)
+
+
 % Sample time (s) - recommended for high-freq switching
 T_s = 1e-6;
 

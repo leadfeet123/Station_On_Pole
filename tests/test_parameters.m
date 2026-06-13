@@ -67,6 +67,12 @@ assert(B_sat == 1.56, 'B_sat value is incorrect');
 assert(exist('L_mag', 'var') == 1, 'L_mag should be defined');
 assert(L_mag == 0.05, 'L_mag value is incorrect');
 
+% Validate saturation curve parameters
+assert(exist('I_sat_points', 'var') == 1, 'I_sat_points should be defined');
+assert(length(I_sat_points) > 2, 'I_sat_points should have more than 2 points');
+assert(exist('Phi_sat_points', 'var') == 1, 'Phi_sat_points should be defined');
+assert(length(Phi_sat_points) == length(I_sat_points), 'Phi_sat_points and I_sat_points should have same length');
+
 assert(exist('S_rated_va', 'var') == 1, 'S_rated_va should be defined');
 assert(S_rated_va == 20e6, 'S_rated_va value is incorrect');
 
